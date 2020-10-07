@@ -2,4 +2,4 @@
 
 ### Created with React and Material UI
 
-![Movie App](/pics/Capture.png)
+#### Link: https://my-movie-app-project.herokuapp.com/
