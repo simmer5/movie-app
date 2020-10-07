@@ -33,9 +33,7 @@ export default function App() {
   useEffect(() => {
     //process.env.REACT_APP_MOVIE_API
     axios
-      .get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&primary_release_year=2020&year=2020&with_genres=878`
-      )
+      .get(`https://api-for-movies.herokuapp.com/api/movies`)
       .then((res) => {
         //console.log(res);
         setData(res.data.results);
@@ -47,16 +45,17 @@ export default function App() {
 
   const onSearchSubmit = async (searchTerm) => {
     console.log("logas is search termo is app:", searchTerm);
-    const res = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${searchTerm}r&page=1&include_adult=false`
-    );
-    res
-      .json()
-      .then((res) => {
-        setData(res.results);
-      })
-      .catch((err) => console.log("Cia erroras mano", err));
+    // const res = await fetch(
+    //   `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&query=${searchTerm}r&page=1&include_adult=false`
+    // );
+    // res
+    //   .json()
+    //   .then((res) => {
+    //     setData(res.results);
+    //   })
+    //   .catch((err) => console.log(err));
   };
+
   const handleSorting = (sortingKey) => {
     const sortedData = [...data];
 
