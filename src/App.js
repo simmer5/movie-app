@@ -90,7 +90,7 @@ export default function App() {
         {/* End hero unit */}
         <Grid container justify="center">
           <Grid item md={6} sm={12}>
-            <SerchBar  {/*onSubmit={onSearchSubmit}*/} /> 
+            <SerchBar /*onSubmit={onSearchSubmit}*/ />
           </Grid>
         </Grid>
         <Grid container justify="center">
