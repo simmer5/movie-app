@@ -36,7 +36,7 @@ export default function App() {
       .get(`https://api-for-movies.herokuapp.com/api/movies`)
       .then((res) => {
         console.log("===== res Log from front-end =====", res);
-        setData(res.data.results);
+        setData(res.data);
       })
       .catch((err) => {
         console.log(err);
